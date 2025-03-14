@@ -41,7 +41,7 @@ const stats = [
   { id: 4, name: 'Community Members', value: '100,000+' },
 ];
 
-const testimonials = [
+const feedbacks = [
   {
     content: "The AI certification process has completely transformed how we verify our organic practices. It's simple, fast, and gives our customers complete confidence in our products.",
     author: "Rajesh Kumar",
@@ -269,9 +269,9 @@ const handleSubmit = (e) => {
           </p>
         </motion.div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
+          {feedbacks.map((feedback, index) => (
             <motion.div
-              key={testimonial.author}
+              key={feedback.author}
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -281,18 +281,18 @@ const handleSubmit = (e) => {
               <div className="flex items-center gap-x-4 mb-6">
                 <img
                   className="h-14 w-14 rounded-full object-cover border-2 border-primary/10"
-                  src={testimonial.image}
-                  alt={testimonial.author}
+                  src={feedback.image}
+                  alt={feedback.author}
                 />
                 <div>
                   <h3 className="text-lg font-semibold leading-7 tracking-tight text-gray-900">
-                    {testimonial.author}
+                    {feedback.author}
                   </h3>
-                  <p className="text-sm leading-6 text-gray-600">{testimonial.role}</p>
+                  <p className="text-sm leading-6 text-gray-600">{feedback.role}</p>
                 </div>
               </div>
               <blockquote className="text-gray-700 text-lg leading-7 italic">
-                "{testimonial.content}"
+                "{feedback.content}"
               </blockquote>
             </motion.div>
           ))}
