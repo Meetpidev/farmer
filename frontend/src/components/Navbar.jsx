@@ -24,7 +24,7 @@ export default function Navbar() {
               <div className="flex">
                 <div className="flex flex-shrink-0 items-center">
                   <Link to="/" className="text-2xl font-bold text-primary-600">
-                    NaturalFarm
+                  AgriConnect
                   </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
