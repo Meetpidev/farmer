@@ -115,7 +115,7 @@ const handleSubmit = (e) => {
           <img
             src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&q=80"
             alt="Sustainable farming landscape"
-            className="h-full w-full object-cover opacity-20"
+            className="h-full w-full object-cover opacity-25"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/70 to-white" />
         </motion.div>
