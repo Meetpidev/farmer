@@ -1,4 +1,4 @@
-import FarmVerification from "../models/FarmVerificationModel.js";
+import FarmVerification from "../models/farmVerificationModel.js"
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
 
 // Upload Farm Verification Data
