@@ -8,6 +8,7 @@ import orderRoutes from "./routes/orderRoutes.js";
 // import paymentRoutes from "./routes/paymentRoutes.js";
 import farmVerificationRoutes from "./routes/farmVerificationRoutes.js";
 import tokenRoutes from "./routes/tokenRoutes.js"
+import cors from "cors"
 
 dotenv.config();
 connectDB();
@@ -15,6 +16,7 @@ connectDB();
 const app = express();
 app.use(express.json());
 
+app.use(cors())
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/products", productRoutes);
