@@ -3,10 +3,10 @@ import { uploadOnCloudinary } from "../utils/cloudinary.js";
 
 // Upload Farm Verification Data
 export const uploadFarmVerification = async (req, res) => {
-    const { farmerId, lat, lon } = req.body;
+    const { farmerId, description} = req.body;
 
     // Ensure required data is provided
-    if (!farmerId || !lat || !lon) {
+    if (!farmerId || !description) {
         return res.status(400).json({ message: "All required fields must be provided." });
     }
 
@@ -24,9 +24,9 @@ export const uploadFarmVerification = async (req, res) => {
         // Create new FarmVerification entry
         const farmVerification = new FarmVerification({
             farmerId,
+            description,
             images: imageUrls,
             videos: videoUrls,
-            geoLocation: { lat, lon },
         });
 
         await farmVerification.save();

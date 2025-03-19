@@ -11,13 +11,17 @@ const farmVerificationSchema = new mongoose.Schema(
       type: String, 
       required: true 
     }], // Cloudinary image URLs
+    description:{
+      type: String,
+      required: true
+    },
     videos: [{ 
       type: String 
     }], // Cloudinary video URLs (Optional)
-    geoLocation: { 
-      lat: { type: Number, required: true }, 
-      lon: { type: Number, required: true } 
-    }, // Geo-tagging for farm location
+    // geoLocation: { 
+    //   lat: { type: Number, required: true }, 
+    //   lon: { type: Number, required: true } 
+    // }, // Geo-tagging for farm location
     aiVerified: { 
       type: Boolean, 
       default: false 
