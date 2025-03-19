@@ -18,10 +18,10 @@ const farmVerificationSchema = new mongoose.Schema(
     videos: [{ 
       type: String 
     }], // Cloudinary video URLs (Optional)
-    // geoLocation: { 
-    //   lat: { type: Number, required: true }, 
-    //   lon: { type: Number, required: true } 
-    // }, // Geo-tagging for farm location
+    city:{
+      type: String,
+      required: true
+    }, // Geo-tagging for farm location
     aiVerified: { 
       type: Boolean, 
       default: false 
